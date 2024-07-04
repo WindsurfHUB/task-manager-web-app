@@ -162,7 +162,7 @@ app.post("/add-task", authenticateToken, async (req, res) => {
     });
     await task.save();
 
-    return res.json({ error: false, message: "Task added successfully" });
+   res.json({ error: false, task, message: "Task added successfully" });
   } catch (error) {
     return res
       .status(500)
