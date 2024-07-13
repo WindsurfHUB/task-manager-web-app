@@ -16,6 +16,7 @@ const Home = () => {
   const [isSearch, setIsSearch] = useState(false);
   const [userInfo, setUserInfo] = useState(null);
   const navigate = useNavigate();
+
   const [openAddEditModal, setOpenAddEditModal] = useState({
     isShown: false,
     type: "add",
@@ -42,6 +43,7 @@ const Home = () => {
       message: "",
     });
   };
+
   // API Calls using Axios instance
   // Get all tasks
   const getAllTasks = async () => {
@@ -55,6 +57,7 @@ const Home = () => {
       console.log("An unexpected error occurred. Please try again.");
     }
   };
+
   // API Calls using Axios instance
   // Delete task
   const deleteTask = async (data) => {
@@ -69,6 +72,7 @@ const Home = () => {
       console.log("An unexpected error occurred. Please try again.");
     }
   };
+
   // API Calls using Axios instance
   // Get User Info
   const getUserInfo = async () => {
@@ -84,6 +88,7 @@ const Home = () => {
       }
     }
   };
+
   // API Calls using Axios instance
   // Search for a task
   const onSearchTask = async (query) => {
@@ -100,6 +105,7 @@ const Home = () => {
       console.log("An unexpected error occurred. Please try again.");
     }
   };
+
   // API Calls using Axios instance
   // update isPinned
   const updateIsPinned = async (taskData) => {

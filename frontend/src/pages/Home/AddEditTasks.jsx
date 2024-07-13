@@ -66,7 +66,7 @@ const AddEditTasks = ({
       }
     }
   };
-  
+
   const handleAddTask = () => {
     if (!title) {
       setError("Please enter the title");
